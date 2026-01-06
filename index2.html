@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDP on Quantum Computing - GWECA</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-bar">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png" alt="AICTE Logo">
+            <img src="data:image/png;base64,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" alt="ATAL Academy Logo">
+            <img src="https://gweca.ac.in/files/eventimage/GWECA.JPG" alt="GWECA Logo">
+        </div>
+          <!-- New Bigger Logo -->
+        <div class="special-logo">
+            <img src="https://physicsworld.com/wp-content/uploads/2024/12/IYQST-pic-for-blog-white-background.png" alt="IYQ 2025 Logo">
+            <p><b>(Recognized by International Year of Quantum 2025 under the leadership of UNESCO)</b></p>
+        </div>
+    
+      
+        <h1>AICTE-ATAL Sponsored Faculty Development Program</h1>
+        <h2>Demystifying Quantum Computing: Theory, Technology, and Real-World Applications</h2>
+        <p style="color:#f1efec"><strong>Date:</strong> 10–15 November 2025</p>
+        <p style="color:#f5b62c">
+        <img src="data:image/jpeg;base64,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" alt="Patron Photo" class="profile-pic"><br>
+        <strong>Patron:</strong> Prof. Akhil Ranjan Garg, Vice Chancellor, Bikaner Technical University, Bikaner, Rajasthan
+        </p>
+
+        <p style="color:#f5b62c">
+        <img src="https://i.postimg.cc/Gh4RFDMk/princiapl-pic.jpg" alt="Coordinator Photo" class="profile-pic"><br>
+        <strong>Coordinator:</strong> Prof. Prakriti Trivedi, Principal, Govt. Mahila Engineering College, Ajmer, Rajasthan
+        </p>
+
+        <p style="color:#f5b62c">
+        <img src="data:image/jpeg;base64,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" alt="Co-Coordinator Photo" class="profile-pic"><br>
+        <strong>Co-Coordinator:</strong> Dr. Gaurav Saxena, Asst. Prof., Govt. Mahila Engineering College, Ajmer, Rajasthan
+        </p>
+
+        <p style="color:#f1efec"><strong>Organized by:</strong> Govt. Mahila Engineering College, Nasirabad Road, Makhupura, Ajmer (Rajasthan) – 305002</p>
+        <a href="https://atalacademy.aicte-india.org/login" target="_blank" class="register-button"><b>Register Now</b></a>
+        <a href="https://docs.google.com/document/d/17EGiT0MrV-CTyEr7ur101Xz9KxtBjgIt/edit?usp=sharing&ouid=111459843084347219599&rtpof=true&sd=true" target="_blank" class="steps-button"><b>How to Register?</b></a>
+    </header>
+      
+<div class="quantum">
+
+  <div class="slide active">
+    <img src="https://gmo-research.ai/en/application/files/5716/6080/5815/Quantum_Computing_Image.png" alt="Quantum Image 1">
+    <p class="source">Source: <a href="https://gmo-research.ai/en/resources/articles/future-quantum-computing" target="_blank">gmo-research.ai</a></p>
+  </div>
+
+  <div class="slide">
+    <img src="https://cdn.mos.cms.futurecdn.net/c4HszRdoBKDepwtFVFhrwV.jpg" alt="Quantum Image 2">
+    <p class="source">Source: <a href="https://www.livescience.com/technology/computing/quantum-computers-are-here-but-why-do-we-need-them-and-what-will-they-be-used-for" target="_blank">livescience</a></p>
+  </div>
+
+  <div class="slide">
+    <img src="https://www.securities.io/wp-content/uploads/2024/02/Quantum-blog_ChetanNayak_03-2022_1400x788-960x540-1.jpg" alt="Quantum Image 3">
+    <p class="source">Source: <a href="https://www.securities.io/the-current-state-of-quantum-computing/" target="_blank">securities.io</a></p>
+  </div>
+
+  <div class="slide">
+    <img src="https://er.educause.edu/-/media/images/articles/2022/07/er22_3101_headerart_1600x900.jpg?hash=E89E69F74E21E075E9B0AA3816420B88742EA122" alt="Quantum Image 4">
+    <p class="source">Source: <a href="https://er.educause.edu/articles/2022/7/quantum-computing-current-progress-and-future-directions" target="_blank">Educause</a></p>
+  </div>
+
+  <div class="slide">
+    <img src="https://images.shiksha.com/mediadata/images/1493202311phpPrd1wN.jpeg" alt="College Image 1">
+    <p class="source">Source: <a href="https://www.shiksha.com/college/government-women-engineering-college-ajmer-52605" target="_blank">Shiksha</a></p>
+  </div>
+
+  <div class="slide">
+    <img src="https://media.collegedekho.com/media/img/institute/crawled_images/Govt._Women_Engineering_College_ajmer34ufoj8.jpg" alt="College Image 2">
+    <p class="source">Source: <a href="https://www.collegedekho.com/colleges/govt-women-engineering-college-ajmer" target="_blank">CollegeDekho</a></p>
+  </div>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 5000);
+</script>
+    <nav class="navbar">
+      <ul>
+        <li><b><a href="#about">About GWECA</a></b></li>
+        <li><b><a href="#fdp">About FDP</a></b></li>
+        <li><b><a href="#iyq">About IYQ</a></b></li>
+        <li><b><a href="#experts">Our Experts</a></b></li>
+        <li><b><a href="#eligibility">Eligibility Rules & More for Participants</a></b></li>
+        <li><b><a href="#venue">Venue & Dates</a></b></li>
+        <li><b><a href="#schedule">Schedule</a></b></li>
+        <li><b><a href="#contact">Contact</a></b></li>
+      </ul>
+    </nav>
+  
+    <section id="about">
+      <h3><u>About Government Mahila Engineering College, Ajmer</u></h3>
+      <p>Govt. Mahila Engineering College, Ajmer, holds the privilege of being the first government engineering college in North India for women. The then Hon’ble Chief Minister of the state laid the foundation stone of this college on 30th April 2007. This college offers B.Tech., M.Tech., and MCA courses for an intake of 500 students every year. The college is located on NH-79 and is easily accessible by rail and road. The nearest airport is situated in Jaipur, Rajasthan.</p>
+      <a href="https://www.gweca.ac.in/" target="_blank">Visit our Official Website</a>
+    </section>
+  
+    <section id="fdp">
+      <h3><u>About the FDP</u></h3>
+      <p>This Faculty Development Program (FDP) is designed to introduce participants to the foundations, technologies, and real-world applications of quantum computing. The program will focus on both theoretical aspects and hands-on implementation using practical quantum programming frameworks. Participants will gain insights into key quantum algorithms, quantum machine learning, and emerging trends in quantum technologies. The sessions will be conducted entirely in offline mode by experts from IITs, NITs, premier research institutes, and industry professionals working in the field of quantum computing.</p>
+      <h4><u>Course Modules:</u></h4>
+      <ul>
+        <li><b><u>Module 1:</u> Quantum Computing Basics</b>
+          <p>
+          <ol>
+              <li>Fundamentals of Quantum Mechanics for Computing </li>
+              <li>Qubits, Quantum States, and Superposition</li>
+              <li>Quantum Gates and Circuits </li>
+              <li>Measurement and Quantum State Collapse </li>
+          </ol>
+          </p>
+        </li>
+        
+        <li><b><u>Module 2:</u> Quantum Programming (Qiskit)</b>
+          <p>
+              <ol>
+                  <li>Introduction to Quantum Programming with Qiskit</li>
+                  <li>Implementing Quantum Circuits in Python </li>
+                  <li>Hands-on Session: Quantum Gates and Circuit Simulation </li>
+                  <li>Cloud-based Quantum Computing Platforms (IBM, Google, Amazon) </li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 3:</u> Mathematical Introduction to Quantum Computing</b>
+          <p>
+              <ol>
+                  <li>Basics of linear algebra (vectors, matrices, tensor products)</li>
+                  <li>Complex numbers & probability in quantum states</li>
+                  <li>Hilbert spaces & Dirac notation</li>
+                  <li>Unitary operators as quantum gates</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 4:</u> Real-World Applications</b>
+          <p>
+              <ol>
+                  <li>Quantum Cryptography and Secure Communications</li>
+                  <li>Quantum Chemistry and Drug Discovery</li>
+                  <li>Financial Modelling and Optimization with Quantum Computing</li>
+                  <li>Industry Use Cases and Emerging Technologies</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 5:</u> Quantum Bharat: Catalyzing Industry-Led Growth on India’s Road to Economic Superpower Status</b>
+          <p>
+              <ol>
+                  <li>India’s quantum ecosystem and national mission initiatives</li>
+                  <li>Role of industry–academia collaboration in quantum growth</li>
+                  <li>Startups and enterprise adoption of quantum technologies</li>
+                  <li>Roadmap for India’s global leadership in the quantum economy</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 6:</u> Quantum-Inspired Computing </b>
+          <p>
+              <ol>
+                  <li>Classical algorithms inspired by quantum principles</li>
+                  <li>Applications in optimization and machine learning</li>
+                  <li>Hybrid quantum–classical approaches</li>
+                  <li>Future scope in real-world problem solving</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 7:</u> Quantum Hardware & Error Correction</b>
+          <p>
+              <ol>
+                  <li>Sources of Quantum Noise and Decoherence</li>
+                  <li>Quantum Error Correction Codes</li>
+                  <li>Noisy Intermediate-Scale Quantum (NISQ) Era and Challenges </li>
+                  <li>Superconducting Qubits, Trapped Ions, and Photonic Quantum Computing</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 8:</u> Future scope in real-world problem solving</b>
+          <p>
+              <ol>
+                  <li>Optimize complex systems like supply chains and logistics</li>
+                  <li>Accelerate drug discovery and molecular simulations</li>
+                  <li>Improve finance, AI, and cybersecurity solutions</li>
+                  <li>Advance materials science and energy problem-solving</li>
+              </ol>
+          </p>
+        </li>
+        <li><b><u>Module 9:</u> Post Quantum Cryptography</b>
+          <p>
+              <ol>
+                  <li>Securing data against quantum attacks</li>
+                  <li>Lattice-based cryptography</li>
+                  <li>Quantum-safe encryption protocols</li>
+                  <li>Migration strategies for current systems</li>
+              </ol>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section id="iyq">
+      <h3><u>What is IYQ?</u></h3>
+      <p>The International Year of Quantum Science and Technology (IYQ) is a global initiative proclaimed by the United Nations on June 7, 2024, to mark 100 years of quantum mechanics.</p>
+
+      <p>Throughout 2025, countries, institutions, and individuals worldwide will celebrate the impact of quantum science—past, present, and future. The aim is to raise awareness of quantum research and its applications through events, educational activities, and public engagement.</p>
+
+      <p>Anyone, anywhere can be part of IYQ—by learning more about quantum, joining or organizing an event, or simply spreading awareness of how this revolutionary science shapes our world.</p>
+
+      <h3><u>Our Contribution</u></h3>
+
+      <p>We are privileged to announce that our Faculty Development Program (FDP) on “Demystifying Quantum Computing: Theory, Technology, and Real-World Applications” is officially recognized by IYQ 2025 under the leadership of UNESCO.</p>
+    </section>
+  
+    <section id="experts">
+      <h3><u>Our Experts</u></h3>
+      <div class="experts-grid">
+    <div class="expert-card">
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSOQoO9uP4UlFYRISnqQ3u61sPMAIylenMwPGi9qBpeYSYGOVRc" alt="Dr. B.K. Agrawal">
+      <h4>Dr. B.K. Agrawal</h4>
+      <p>Professor(Scientist) at Saha Institute of Nuclear Physics,India. Expert in neutron-rich systems and symmetry energy in nuclear physics.</p>
+    </div>
+    <div class="expert-card">
+      <img src="data:image/jpeg;base64,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" alt="Dr. Somitra Sanadhya">
+      <h4>Dr. Somitra Sanadhya</h4>
+      <p>Professor at IIT Jodhpur. Researcher in cryptography, quantum computation, and cybersecurity.</p>
+    </div>
+    <div class="expert-card">
+      <img src="data:image/jpeg;base64,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" alt="Dr. Pilli Emmanuel Shubhakar">
+      <h4>Dr. Pilli Emmanuel Shubhakar</h4>
+      <p>Associate Professor at MNIT Jaipur. Known for work in cybersecurity, forensics, and emerging tech.</p>
+    </div>
+    <div class="expert-card">
+      <img src="https://media.licdn.com/dms/image/v2/C4D03AQHcgF5jmcPUxg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516865845866?e=2147483647&v=beta&t=4bPQYFD3rUioWtclZADNeKHhBdDnpAuVDo0yw5zTxE8" alt="Dr. Sulabh Bansal">
+      <h4>Dr. Sulabh Bansal</h4>
+      <p>Associate Professor at Manipal University, Jaipur. Specializes in algorithms, AI, and quantum-inspired computing.</p>
+    </div>
+    <div class="expert-card">
+      <img src="https://login.lnmiit.ac.in/uploads/faculty/dr-harsh-chandrakant-trivedi.jpg">
+      <h4>Dr. Harsh Trivedi</h4>
+      <p>Associate Professor and Head of the Department, Department of Mathematics at LNMIIT, Jaipur.</p>
+    </div>
+    <div class="expert-card">
+      <img src="https://media.licdn.com/dms/image/v2/C5103AQGe_HFEnMnaqw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1554450339397?e=2147483647&v=beta&t=r-zNbxi4XiofUHl8461jIV1v1UWfMKWokSJ0smTc-Ww">
+      <h4>Mr. Anuj Mehrotra</h4>
+      <p>CTO at IOT AONE IQ SOLUTIONS. Expert in Responsible AI, Enterprise Automation, Quantum Tech, and Cloud transformation, architecting scalable digital ecosystems and smart enterprise platforms.</p>
+    </div>
+    <div class="expert-card">
+      <img src="https://i.postimg.cc/Gh4RFDMk/princiapl-pic.jpg">
+      <h4>Dr. Prakriti Trivedi</h4>
+      <p>Principal at Government Mahila Engineering College, Ajmer.</p>
+    </div>
+    <div class="expert-card">
+      <img src="data:image/jpeg;base64,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">
+      <h4>Dr. Gaurav Saxena</h4>
+      <p>Assistant Professor, Department of Physics, Government Mahila Engineering College, Ajmer.</p>
+    </div>
+  </div>
+  
+    </section>
+  
+    <section id="eligibility">
+  <h3><u>Eligibility Rules & More for Participants</u></h3>
+
+  <h4><u>Eligibility for Participants:</u></h4>
+  <ol>
+    <li>Faculty members of the AICTE approved institutions, Research scholars, PG Scholars, Industry professionals, nominated by the head of the institutions as mentioned for BASIC and ADVANCED FDPS.</li>
+    <li>Of the participants, maximum 30% participants can be from the host institution, proportionate to the number of external participants, i.e., limited to a maximum 15 participants from host institution. </li>
+    <li>Maximum 50 (minimum 30) participants be allowed to attend FDP. However, for the North East region, Jammu, Kashmir, Ladakh and Andaman & Nicobar Islands, the Min / Max Limit is 20/50.</li>
+    <li>A participant can sign up and attend a maximum of three FDPs (2 Basic and 1 Advanced) per academic year. </li>
+    <li>There would be no provision for lodging from the end of ATAL Academy/ AICTE. However, refreshments & lunch would be provided free of cost. External Participants will also get a lump sum Travelling allowance subject to travelling more than 20 Km one side and attending at least 90% of the sessions. </li>
+    <li>ATAL FDPs are free, and no fee will be charged from any participants.</li>
+  </ol>
+
+  <h4><u>Certification:</u></h4>
+  <p>Candidates would be eligible to receive a certificate upon achieving at least 70% cumulative weightage in the following components:</p>
+  <ol>
+    <li>Attendance – minimum 80% attendance essential. 100 % attendance = 20% weightage</li>
+    <li>One assessment (MCQs/short answer/reasoning based) = 10% weightage</li>
+    <li>2 Page Article Summary per Team (Team & Individual) = 30% weightage</li>
+    <li>Output of practical sessions (Individual) = 15% weightage</li>
+    <li>Industrial visit report/outcome (Team) = 10% weightage</li>
+    <li>Reflection Journal (Individual, at the end) = 15% weightage</li>
+  </ol>
+
+  <h4><u>Accommodation and Registration:</u></h4>
+  <ul>
+    <li>All participants must upload their Identity Card and a No Objection Certificate (NOC) from their approving authority at the time of registration.</li>
+    <li>A participant may attend a maximum of three FDPs per academic year (2 Basic + 1 Advanced).</li>
+    <li><strong>Accommodation:</strong> There is no provision for lodging from AICTE/ATAL Academy or the host institute. Participants may arrange their own stay in nearby hotels (e.g., <a href="https://www.mountviewhotelajmer.com/" target="_blank">Hotel Mount View, Ajmer</a>).</li>
+    <li><strong>Food & Travel:</strong> Only working lunch will be provided free of cost as per AICTE guidelines. External participants are entitled to a lump sum travel allowance of ₹1200/-, provided:
+      <ul>
+        <li>Travel distance is more than 20 km (one side)</li>
+        <li>The participant attends at least 90% of the sessions</li>
+      </ul>
+    </li>
+    <li><strong>Fees:</strong> ATAL FDPs are completely free of charge. No participation fee is applicable.</li>
+  </ul>
+
+  <h4 style="color:red"><u>Important!</u></h4>
+  <p>All the participants are required to bring the NOC at the time of attending the event.</p>
+  <p>To Download the word file of NOC: <a href="https://docs.google.com/document/d/1cZ2sLsbQY7bOn7hD31G6PRk8p34BKb0a/edit?usp=sharing&ouid=111459843084347219599&rtpof=true&sd=true" target="_blank">Click Here</a></p>
+  <p>To Download the pdf file of NOC: <a href="https://drive.google.com/file/d/144JphJRIw-0tOaFO_fQo5fWaG1T7ROfV/view?usp=sharing" target="_blank">Click Here</a></p>
+</section>
+
+  
+    <section id="venue">
+      <h3><u>Duration, Last Date &amp; Venue</u></h3>
+      <p><strong>Duration:</strong> The FDP duration is 6 days (10-15 November, 2025), having 3 sessions of 120 minutes each per day. The FDP will be conducted as per ATAL guidelines.</p>
+      <p><strong>Last Date to Register:</strong> 30 October 2025</p>
+      <p>To register, please visit: <a href="https://atalacademy.aicte-india.org/login" target="_blank">https://atalacademy.aicte-india.org/login</a></p>
+      <p><strong>Venue:</strong> Govt. Mahila Engineering College, Nasirabad Road, Ajmer, Rajasthan– 305002</p>
+      <p>Google link of direction to the Venue is: <a href="https://maps.app.goo.gl/L14Uw1v66N8yVXnp6" target="_blank">https://maps.app.goo.gl/L14Uw1v66N8yVXnp6</a></p>
+
+      <h3><u>Ways to Reach the Venue</u></h3>
+<ul>
+  <li><strong>By Air:</strong> The nearest airports are <em>Jaipur International Airport</em> (approx. 145 km from the venue) and <em>Kishangarh Airport</em> (approx. 32 km away). From both airports, participants can conveniently hire a cab or take a bus/train to reach Ajmer.</li>
+  
+  <li><strong>By Bus:</strong> The venue is located around 10 km from the main Ajmer Bus Stand, which is well-connected to major cities of Rajasthan and beyond.</li>
+  
+  <li><strong>By Train:</strong> Ajmer Junction Railway Station, one of the busiest stations in Rajasthan, is situated approximately 8 km from the venue and offers excellent connectivity to various parts of India.</li>
+</ul>
+
+
+    </section>
+  
+    <section id="schedule">
+      <h3><u>Schedule of the Event</u></h3>
+      <p>Detailed session-wise schedule will be available via PDF.</p>
+      <p>To Download the Schedule: <a href="https://docs.google.com/document/d/1Beg1lhbyn9Nyj-psRq-Li5ZKj2iW2pIh/edit?usp=sharing&ouid=111459843084347219599&rtpof=true&sd=true" target="_blank">Click Here</a></p>
+    </section>
+  
+    <section id="contact">
+      <h3>Contact & Support</h3>
+      <p><strong>Dr. Gaurav Saxena</strong><br>
+      Email: gauravsaxena@gweca.ac.in<br>
+      Phone: +91-9460875009, +91-7014287393</p>
+    </section>
+  
+  <footer>
+  <p>&copy; 2025 Govt. Mahila Engineering College, Ajmer | FDP Quantum Computing</p>
+  <p>Created by <b>Sakshi Dhaka</b> | 23cse100@gweca.ac.in</p>
+  </footer>
+  </body>
+  </html>
+  
+</body>
+</html>
